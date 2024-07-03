@@ -15,7 +15,7 @@ function App() {
       });
 
       setTimeout(() => unsubscribeSecondHandler(), 5000); // отписываемся от 'second handler' через 5 секунд
-    }, [onVisibilityChange]);
+    }, []);
 
     return (
       <div>
