@@ -8,30 +8,30 @@ interface HookReturn {
   onVisibilityChange: (fn: CallbackType) => () => void;
 }
 
-function getVisisbleStatus() {
+function getVisibleStatus() {
   return !document.hidden;
 }
 
 function useDocumentVisibility(): HookReturn {
-  const [isVisible, setIsVisible] = useState(getVisisbleStatus());
+  const [isVisible, setIsVisible] = useState(getVisibleStatus());
   const [inactiveCount, setInactiveCount] = useState(0);
 
   useEffect(() => {
     document.addEventListener('visibilitychange', eventListener);
 
-    return () => document.removeEventListener('visibilitychange', eventListener, true);
+    return () => document.removeEventListener('visibilitychange', eventListener);
   }, []);
 
   const eventListener = () => {
-    setIsVisible(getVisisbleStatus());
+    setIsVisible(getVisibleStatus());
 
-    if (getVisisbleStatus()) {
+    if (getVisibleStatus()) {
       setInactiveCount((prev) => prev + 1);
     }
   };
 
   const onVisibilityChange = (fn: CallbackType) => {
-    const callback = () => fn(getVisisbleStatus());
+    const callback = () => fn(getVisibleStatus());
 
     document.addEventListener('visibilitychange', callback);
 
