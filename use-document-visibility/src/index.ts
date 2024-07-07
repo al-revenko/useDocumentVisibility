@@ -12,7 +12,7 @@ function getVisibleStatus() {
   return !document.hidden;
 }
 
-function useDocumentVisibility(): HookReturn {
+export function useDocumentVisibility(): HookReturn {
   const [isVisible, setIsVisible] = useState(getVisibleStatus());
   const [inactiveCount, setInactiveCount] = useState(0);
 
@@ -44,5 +44,3 @@ function useDocumentVisibility(): HookReturn {
     onVisibilityChange,
   };
 }
-
-export default useDocumentVisibility;

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { useEffect } from 'react';
-import useDocumentVisibility from '@lokixio/use-document-visibility';
+import { useDocumentVisibility } from '@lokixio/use-document-visibility';
 
 function App() {
   const { count, visible, onVisibilityChange } = useDocumentVisibility();
