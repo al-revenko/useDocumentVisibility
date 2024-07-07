@@ -24,6 +24,4 @@ yarn
 yarn dev
 ```
 
-
-
 ### [Пример использования](./example/src/App.tsx)

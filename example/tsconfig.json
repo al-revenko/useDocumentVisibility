@@ -1,4 +1,4 @@
-{ 
+{
   "files": [],
   "references": [
     {
@@ -8,7 +8,7 @@
       "path": "./tsconfig.node.json"
     },
     {
-      "path": "../hook"
+      "path": "../use-document-visibility"
     }
   ]
 }
