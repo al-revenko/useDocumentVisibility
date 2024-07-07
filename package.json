@@ -8,9 +8,8 @@
   ],
   "private": true,
   "scripts": {
-    "dev": "yarn workspace example dev",
-    "watch": "yarn workspace @lokixio/use-document-visibility dev",
     "build": "yarn workspace @lokixio/use-document-visibility build",
+    "public": "yarn build && yarn workspace @lokixio/use-document-visibility public",
     "fix": "yarn fix:eslint & yarn fix:prettier",
     "lint:prettier": "prettier --check .",
     "fix:prettier": "prettier --write .",

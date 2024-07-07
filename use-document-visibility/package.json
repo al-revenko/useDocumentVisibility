@@ -1,6 +1,7 @@
 {
   "name": "@lokixio/use-document-visibility",
-  "version": "1.0.0",
+  "private": false,
+  "version": "1.0.1",
   "description": "Хук, который показывает: активная ли страница, сколько раз с момента инициализации компонента вкладка становилась неактивной и предоставляет функцию, в которой можно подписаться на изменение видимости текущей вкладки",
   "type": "module",
   "main": "dist/index.js",
@@ -9,7 +10,8 @@
   "license": "ISC",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "public": "npm publish --access=public"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
